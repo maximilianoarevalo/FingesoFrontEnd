@@ -46,5 +46,11 @@ export class IdeaSaveComponent implements OnInit {
       this.gotoList();
     }, error => console.error(error));
   }
+  
+  remove(href) {
+    this.ideaService.remove(href).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+  }
 
 }

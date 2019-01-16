@@ -22,5 +22,9 @@ export class IdeaService {
     result = this.http.post('//localhost:8080/ideas/', idea);
     return result;
   }
+    
+  remove(href: string) {
+    return this.http.delete(href);
+  }
 
 }
