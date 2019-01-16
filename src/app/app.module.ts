@@ -13,12 +13,14 @@ import { AppComponent } from './app.component';
 import { IdeaListComponent } from './idea-list/idea-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IdeaSaveComponent } from './idea-save/idea-save.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdeaListComponent,
-    IdeaSaveComponent
+    IdeaSaveComponent,
+    NavbarComponent
   ],
   imports: [
     FormsModule,
