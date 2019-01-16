@@ -14,13 +14,17 @@ import { IdeaListComponent } from './idea-list/idea-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IdeaSaveComponent } from './idea-save/idea-save.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DesafioListComponent } from './desafio-list/desafio-list.component';
+import { DesafioSaveComponent } from './desafio-save/desafio-save.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdeaListComponent,
     IdeaSaveComponent,
-    NavbarComponent
+    NavbarComponent,
+    DesafioListComponent,
+    DesafioSaveComponent
   ],
   imports: [
     FormsModule,
