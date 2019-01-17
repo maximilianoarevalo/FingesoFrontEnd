@@ -1,23 +1,17 @@
 
-<mat-card>
+<mat-card [style.backgroundColor]="'white'">
 
-  <h2>Desafios</h2>
+  <h2 style="color:#B40431;"><u>Desafios</u></h2>
   <mat-card-content class="row">
-
-
-  
     <mat-list>
-      <mat-list-item *ngFor="let desafio of desafios">
-        <h3 mat-line>{{desafio.nombre}}</h3>
-        <br> <div><h3 mat-line>{{desafio.descripcion}}</h3></div>
-        <h3 mat-line>
-          <a mat-button [routerLink]="" ></a>
-        </h3>
-      </mat-list-item>
+      <section class="demo" *ngFor="let desafio of desafios">     
+        <h4 style="color:white;">{{desafio.nombre}}</h4> 
+        <div class="a" style="color:white;">{{desafio.descripcion}}</div>
+      </section>
     </mat-list>
   </mat-card-content>
-
-
   <button type="button" [routerLink]="['/desafio-save']" class="btn btn-danger">Danger</button>
-
 </mat-card>
+
+
+
