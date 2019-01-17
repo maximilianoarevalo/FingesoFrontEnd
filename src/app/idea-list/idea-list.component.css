@@ -54,3 +54,25 @@
     margin-right: 180px;
     margin-left: 80px;
 }
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  margin-left: 43%;
+}
+
+p[_ngcontent-c2] {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 32%;
+}
+.h2, h2 {
+  font-size: 2rem;
+  margin-left: 19%;
+}
