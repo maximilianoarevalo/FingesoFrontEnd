@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesafioService } from '../shared/desafio/desafio.service';
 
 @Component({
   selector: 'app-desafio-list',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesafioListComponent implements OnInit {
 
-  constructor() { }
+  desafios: Array<any>;
+
+  constructor(private desafioService: DesafioService) { }
 
   ngOnInit() {
+    this.desafioService.getAll().subscribe(data => {
+      this.desafios = data;
+    });
   }
-
 }

@@ -1,39 +1,23 @@
 
 <mat-card>
- 
- 
- 
- 
+
   <h2>Desafios</h2>
   <mat-card-content class="row">
 
 
-      
-
+  
     <mat-list>
       <mat-list-item *ngFor="let desafio of desafios">
-        <h3 mat-line>{{idea.nombre}}</h3>
-        <br> <h3 mat-line>{{idea.descripcion}}</h3>
+        <h3 mat-line>{{desafio.nombre}}</h3>
+        <br> <div><h3 mat-line>{{desafio.descripcion}}</h3></div>
         <h3 mat-line>
-          <a mat-button [routerLink]="['/idea-edition', idea.id]">Editar Titulo</a>
+          <a mat-button [routerLink]="" ></a>
         </h3>
       </mat-list-item>
     </mat-list>
-
-  
-
-
   </mat-card-content>
 
 
   <button type="button" [routerLink]="['/desafio-save']" class="btn btn-danger">Danger</button>
-  
-
-
-
-
-
-
-
 
 </mat-card>
