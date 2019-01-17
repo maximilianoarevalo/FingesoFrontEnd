@@ -23,3 +23,16 @@
     margin-left: 10px;
     text-align: center;
 }
+
+.mat-card[_ngcontent-c6] {
+    background: #B40431;
+    color: #fff;
+    /* position: relative; */
+    width: 500px;
+    /* height: 200px; */
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-top: -100px;
+    margin-left: -150px;
+}
