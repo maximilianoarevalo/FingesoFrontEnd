@@ -16,21 +16,23 @@
 </mat-card>-->
 
 
-
 <mat-card [style.backgroundColor]="'white'">
-    <h2 style="color:#B40431;"><u>Ideas</u></h2>
+    <h2 style="color:#B40431;"><p>Ideas<br>En este lugar podrás publicar tu idea!
+    </p></h2>
+    <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Publicar Idea</button>
     <mat-card-content>
       <mat-list>
         <section class="demo" *ngFor="let idea of ideas">     
           <h4 style="color:white;">{{idea.nombre}}</h4> 
           <div class="a" style="color:white;">{{idea.descripcion}}</div>
           <h3 mat-line>
-            <a mat-button [routerLink]="['/idea-edition', idea.id]">Editar Titulo</a>
+            <a mat-button [routerLink]="['/idea-show', idea._id]" class="btn btn-light"
+            style="color:#B40431">Ver Idea</a>
           </h3>
         </section>
       </mat-list>
     </mat-card-content>
-    <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Danger</button>
+   
   </mat-card>
   
   

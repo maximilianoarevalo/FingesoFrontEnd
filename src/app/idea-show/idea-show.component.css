@@ -1,0 +1,13 @@
+.card{
+    margin-top: 20px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: white;
+    background-color: #B40431;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
