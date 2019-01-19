@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 export class IdeaService {
   constructor(private http: HttpClient) {
    }
-   
+
    getAll(): Observable<any>{
      return this.http.get('//localhost:8080/ideas/')
    }
@@ -22,13 +22,16 @@ export class IdeaService {
     result = this.http.post('//localhost:8080/ideas/', idea);
     return result;
   }
-    
+
   remove(href: string) {
     return this.http.delete(href);
   }
 
   getAllIdeasBuscadasByNombre(nombre: string): Observable<any>{
     return this.http.get('//localhost:8080/ideas/buscar/'+nombre);
+  }
+  getAllComentariosInIdea(id: string): Observable<any>{
+    return this.http.get('//localhost:8080/ideas'+'/'+id+'/comentarios');
   }
 
 }
