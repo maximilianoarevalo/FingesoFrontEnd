@@ -1,27 +1,13 @@
-<!--<mat-card>
-  <mat-card-header>Ideas</mat-card-header>
-  <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let idea of ideas">
-        <h3 mat-line>{{idea.nombre}}</h3>
-        <br> <h3 mat-line>{{idea.descripcion}}</h3>
-        <h3 mat-line>
-          <a mat-button [routerLink]="['/idea-edition', idea.id]">Editar Titulo</a>
-        </h3>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-
-  <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Danger</button>
-</mat-card>-->
-
-
 <mat-card [style.backgroundColor]="'white'">
     <h2 style="color:#B40431;"><p>Ideas</p></h2>
     <h4 style="color:#B40431;"><p>En este lugar podrás publicar tu idea</p></h4>
     <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Publicar Idea</button>
     <mat-card-content>
       <mat-list>
+          <div class="col-lg-6 offset-lg-0" style="width: 700px;">
+              <input id="titulo" [(ngModel)]="titulo"/>
+              <button style="color:#B40431" (click)="getIdeaByTitle()" class="btn" type="button" id="buscarButton">Buscar</button>
+          </div>
         <section class="demo" *ngFor="let idea of ideas">     
           <h4 style="color:white;">{{idea.nombre}}</h4> 
           <div class="a" style="color:white;">{{idea.descripcion}}</div>
@@ -32,7 +18,6 @@
         </section>
       </mat-list>
     </mat-card-content>
-   
   </mat-card>
   
   

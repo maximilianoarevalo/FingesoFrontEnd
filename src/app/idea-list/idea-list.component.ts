@@ -8,8 +8,16 @@ import { IdeaService } from '../shared/idea/idea.service';
 })
 export class IdeaListComponent implements OnInit {
   ideas: Array<any>;
-
+  titulo: string;
   constructor(private ideaService: IdeaService) { }
+
+  getIdeaByTitle()
+  {
+    this.ideaService.getAllIdeasBuscadasByNombre(this.titulo).subscribe
+    (data => 
+      { this.ideas = data;}
+      )
+  }
 
   ngOnInit() {
     this.ideaService.getAll().subscribe(data => {

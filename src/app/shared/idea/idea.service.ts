@@ -27,4 +27,8 @@ export class IdeaService {
     return this.http.delete(href);
   }
 
+  getAllIdeasBuscadasByNombre(nombre: string): Observable<any>{
+    return this.http.get('//localhost:8080/ideas/buscar/'+nombre);
+  }
+
 }

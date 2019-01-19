@@ -1,7 +1,9 @@
 
 <mat-card [style.backgroundColor]="'white'">
 
-  <h2 style="color:#B40431;"><u>Desafios</u></h2>
+  <h2 style="color:#B40431;"><p>Desafios</p></h2>
+  <h4 style="color:#B40431;"><p>En este lugar podrás publicar tu Desafio</p></h4>
+  <button type="button" [routerLink]="['/desafio-save']" class="btn btn-danger">Publicar Desafio</button>
   <mat-card-content class="row">
     <mat-list>
       <section class="demo" *ngFor="let desafio of desafios">     
@@ -10,8 +12,8 @@
       </section>
     </mat-list>
   </mat-card-content>
-  <button type="button" [routerLink]="['/desafio-save']" class="btn btn-danger">Danger</button>
 </mat-card>
 
 
 
+ 
