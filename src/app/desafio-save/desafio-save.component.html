@@ -1,3 +1,27 @@
-<p>
-  desafio-save works!
-</p>
+<mat-card>
+    <form #desafioForm="ngForm" (ngSubmit)="save(desafioForm.value)">
+        <mat-card-header>
+            <mat-card-title><h2>{{desafio.nombre ? 'Publicar' : 'Publicar'}} Desafio</h2></mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-form-field>
+                <input matInput placeholder="Nombre Desafio" [(ngModel)]="desafio.nombre" required name="nombre" #nombre>
+            </mat-form-field><br>
+            
+            <mat-form-field>
+                <input matInput placeholder="Descripción Desafio" [(ngModel)]="desafio.descripcion" required name="descripcion" #descripcion>
+            </mat-form-field>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit"
+                    [disabled]="!desafioForm.form.valid">Publicar</button>
+            <!--<button mat-raised-button color="secondary" (click)="remove(idea.href)"
+                    *ngIf="idea.href" type="button">Eliminar</button>-->
+            <a mat-button routerLink="/desafio-list">Cancelar</a>
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+    </form>
+</mat-card>
+  

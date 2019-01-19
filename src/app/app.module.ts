@@ -17,7 +17,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioSaveComponent } from './desafio-save/desafio-save.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
-import { IdeaSearchComponent } from './idea-search/idea-search.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { IdeaSearchComponent } from './idea-search/idea-search.component';
     DesafioListComponent,
     DesafioSaveComponent,
     IdeaShowComponent,
-    IdeaSearchComponent
   ],
   imports: [
     FormsModule,
