@@ -1,0 +1,22 @@
+
+<div class="card" id="card">
+  <div class="card-header">
+    {{desafio.nombre}}
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{desafio.descripcion}}</p>
+  </div>
+</div>
+<br>
+<br>
+<div class="card" id="comment" *ngFor="let idea of desafio.ideas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <div class="card-header"><span class="glyphicon glyphicon-user"></span>      Usuario</div>
+    <section class="demo" >
+      <h4 style="color:#B40431;">{{idea.nombre}}</h4>
+      <a mat-button [routerLink]="['/idea-show', idea._id]" class="btn btn-light" style="color:#B40431">Ver Idea</a>  
+    </section>
+
+</div>
+

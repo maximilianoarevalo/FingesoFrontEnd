@@ -9,6 +9,7 @@
       <section class="demo" *ngFor="let desafio of desafios">     
         <h4 style="color:white;">{{desafio.nombre}}</h4> 
         <div class="a" style="color:white;">{{desafio.descripcion}}</div>
+        <button type="button" [routerLink]="['/desafio-show', desafio._id]" class="btn btn-danger">Ver Desafio</button>
       </section>
     </mat-list>
   </mat-card-content>

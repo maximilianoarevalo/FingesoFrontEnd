@@ -5,6 +5,8 @@ import { IdeaSaveComponent } from './idea-save/idea-save.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioSaveComponent } from './desafio-save/desafio-save.component';
+import { DesafioShowComponent } from './desafio-show/desafio-show.component';
+import { IdeaSaveInDesafioComponent } from './idea-save-in-desafio/idea-save-in-desafio.component';
 
 
 
@@ -29,8 +31,14 @@ const routes: Routes = [
     {
         path: 'desafio-save',
         component: DesafioSaveComponent
-    }
-    
+    },
+    {
+        path: 'desafio-show/:id', component: DesafioShowComponent
+    }, 
+    {
+        path: 'idea-save-in-desafio',
+        component: IdeaSaveInDesafioComponent
+    }, 
 ];
 
 @NgModule({

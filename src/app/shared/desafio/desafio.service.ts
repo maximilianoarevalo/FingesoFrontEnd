@@ -29,6 +29,10 @@ export class DesafioService {
    return this.http.delete(href);
  }
 
+ getAllIdeasInDesafio(id){
+
+  return this.http.get('//localhost:8080/ideas'+'/'+id+'/')
+ }
 
 
 }

@@ -17,6 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioSaveComponent } from './desafio-save/desafio-save.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
+import { DesafioShowComponent } from './desafio-show/desafio-show.component';
+import { IdeaSaveInDesafioComponent } from './idea-save-in-desafio/idea-save-in-desafio.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { IdeaShowComponent } from './idea-show/idea-show.component';
     DesafioListComponent,
     DesafioSaveComponent,
     IdeaShowComponent,
+    DesafioShowComponent,
+    IdeaSaveInDesafioComponent,
   ],
   imports: [
     FormsModule,

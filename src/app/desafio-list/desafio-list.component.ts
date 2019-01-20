@@ -17,4 +17,17 @@ export class DesafioListComponent implements OnInit {
       this.desafios = data;
     });
   }
+
+  seleccionarDesafio(id: String){
+
+    console.log(id);
+
+
+  }
+
+
+
+
+
+
 }
