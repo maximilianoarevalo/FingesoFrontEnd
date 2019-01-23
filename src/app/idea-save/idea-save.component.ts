@@ -20,37 +20,38 @@ export class IdeaSaveComponent implements OnInit {
 
     }
 
-  ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      const id = params['id'];
-      if (id) {
-        this.ideaService.get(id).subscribe((idea: any) => {
-          if (idea) {
-            this.idea = idea;
-            this.idea.href = idea._links.self.href;
-          } else {
-            console.log(`Idea with id '${id}' not found, returning to list`);
-            this.gotoList();
-          }
-        });
-      }
-    });
-  }
+    ngOnInit() {
 
-  gotoList() {
-    this.router.navigate(['/idea-list']);
-  }
+      this.sub = this.route.params.subscribe(params => {
+        const id = params['id'];
+        if (id) {
+          this.ideaService.get(id).subscribe((idea: any) => {
+            if (idea) {
+              this.idea = idea;
+              this.idea.href = idea._links.self.href;
+            } else {
+              console.log(`Idea with id '${id}' not found, returning to list`);
+              this.gotoList();
+            }
+          });
+        }
+      });
+    }
 
-  save(form: NgForm){
-    this.ideaService.save(form).subscribe(result => {
-      this.gotoList();
-    }, error => console.error(error));
-  }
-  
-  remove(href) {
-    this.ideaService.remove(href).subscribe(result => {
-      this.gotoList();
-    }, error => console.error(error));
-  }
+    gotoList() {
+      this.router.navigate(['/desafio-list']);
+    }
+
+    save(form: NgForm){
+      this.ideaService.save(form).subscribe(result => {
+        this.gotoList();
+      }, error => console.error(error));
+    }
+    
+    remove(href) {
+      this.ideaService.remove(href).subscribe(result => {
+        this.gotoList();
+      }, error => console.error(error));
+    }
 
 }

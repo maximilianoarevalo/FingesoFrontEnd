@@ -43,6 +43,11 @@ export class DesafioSaveComponent implements OnInit {
     }, error => console.error(error));
   }
   
+  remove(href) {
+    this.desafioService.remove(href).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+  }
 
 
 

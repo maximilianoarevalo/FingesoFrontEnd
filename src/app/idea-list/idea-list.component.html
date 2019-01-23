@@ -4,14 +4,9 @@
     <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Publicar Idea</button>
   <mat-card-content>
     <mat-list>
-
-    
-      
-    
       <div class="col-lg-6 offset-lg-0" style="width: 700px;">
-        <input type="text" [(ngModel)]="term" placeholder="Busca tu idea"/>
-        <button type="button" (click)="getIdeaByTitle(term)" class="btn btn-danger">Buscar</button>
-      
+          <input type="text" [(ngModel)]="term" placeholder="Busca tu idea"/>
+          <button type="button" (click)="getIdeaByTitle(term)" class="btn btn-danger">Buscar</button>
         <section class="demo" *ngFor="let idea of ideas">     
           <h4 style="color:white;">{{idea.nombre}}</h4> 
           <div class="a" style="color:white;">{{idea.descripcion}}</div>
