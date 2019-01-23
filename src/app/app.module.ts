@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { IdeaService } from './shared/idea/idea.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 
 import { AppComponent } from './app.component';

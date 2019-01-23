@@ -1,12 +1,20 @@
 
-<div class="card" id="card">
-  <div class="card-header">
-    {{desafio.nombre}}
+
+<!-- Cabecera Donde esta la info del Desafio -->
+
+<mat-card [style.backgroundColor]="'white'">
+  <div class="card" id="card">
+    <div class="card-header">{{desafio.nombre}}</div>
+    <div class="card-body">
+      <p style="color:#B40431;" class="card-text">{{desafio.descripcion}}</p>
+    </div>
   </div>
-  <div class="card-body">
-    <p class="card-text">{{desafio.descripcion}}</p>
-  </div>
-</div>
+  <h2 style="color:#B40431;">Publica tu idea dentro de este Desafio</h2>
+  <button type="button" [routerLink]="['/idea-save-in-desafio', desafio._id]" class="btn btn-danger">Publicar Idea</button>s
+</mat-card>
+
+<!-- Lista de Ideas -->
+
 <br>
 <br>
 <div class="card" id="comment" *ngFor="let idea of desafio.ideas">

@@ -11,12 +11,23 @@ export class IdeaListComponent implements OnInit {
   titulo: string;
   constructor(private ideaService: IdeaService) { }
 
-  getIdeaByTitle()
+  getIdeaByTitle(nombre: string)
   {
-    this.ideaService.getAllIdeasBuscadasByNombre(this.titulo).subscribe
-    (data => 
+
+    if (nombre === "undefined") {
+      
+      this.ideaService.getAllIdeasBuscadasByNombre("a").subscribe
+      (data => 
       { this.ideas = data;}
       )
+
+    }else{
+
+      this.ideaService.getAllIdeasBuscadasByNombre(nombre).subscribe
+      (data => 
+        { this.ideas = data;}
+        )
+    }
   }
 
   ngOnInit() {

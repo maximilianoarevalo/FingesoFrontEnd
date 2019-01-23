@@ -25,19 +25,16 @@ const routes: Routes = [
     },
     { path: '', redirectTo: '/desafio-list', pathMatch: 'full'},
     {
-        path: 'desafio-list',
-        component: DesafioListComponent
+        path: 'desafio-list', component: DesafioListComponent
     },
     {
-        path: 'desafio-save',
-        component: DesafioSaveComponent
+        path: 'desafio-save', component: DesafioSaveComponent
     },
     {
         path: 'desafio-show/:id', component: DesafioShowComponent
     }, 
     {
-        path: 'idea-save-in-desafio',
-        component: IdeaSaveInDesafioComponent
+        path: 'idea-save-in-desafio/:id', component: IdeaSaveInDesafioComponent
     }, 
 ];
 

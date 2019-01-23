@@ -1,3 +1,32 @@
-<p>
-  idea-save-in-desafio works!
-</p>
+
+
+
+
+<mat-card>
+        <form #ideaForm="ngForm" (ngSubmit)="save(ideaForm.value)">
+          <mat-card-header>
+            <mat-card-title><h2>{{idea.nombre ? 'Publicar' : 'Publicar'}} Idea</h2></mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <input type="hidden" name="href" [(ngModel)]="idea.href">
+            <mat-form-field>
+              <input matInput placeholder="Nombre idea" [(ngModel)]="idea.nombre"
+                     required name="nombre" #nombre>
+            </mat-form-field><br>
+            <mat-form-field>
+              <input matInput placeholder="Descripción idea" [(ngModel)]="idea.descripcion"
+                     required name="descripcion" #descripcion>
+            </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit"
+                    [disabled]="!ideaForm.form.valid">Publicar</button>
+            <button mat-raised-button color="secondary" (click)="remove(idea.href)"
+                    *ngIf="idea.href" type="button">Eliminar</button>
+            <a mat-button routerLink="/idea-list">Cancelar</a>
+          </mat-card-actions>
+          <mat-card-footer>
+          </mat-card-footer>
+        </form>
+</mat-card>
+      
