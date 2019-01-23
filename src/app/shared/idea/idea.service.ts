@@ -31,7 +31,7 @@ export class IdeaService {
     return this.http.get('//localhost:8080/ideas/buscar/'+nombre);
   }
   getAllComentariosInIdea(id: string): Observable<any>{
-    return this.http.get('//localhost:8080/ideas'+'/'+id+'/comentarios');
+    return this.http.get('//localhost:8080/ideas'+'/'+id+'/comentarios/');
   }
 
 }

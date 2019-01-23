@@ -9,7 +9,23 @@
   </div>
   <br>
   <br>
-  <div class="card" id="comment">
+  <div class="card-body">
+    <form id="search" class="form my-2 my-lg-2">
+    <input class="form-control mr-sm-2" type="text" placeholder="Escribe un comentario" aria-label="Comentar">
+    </form>
+  </div>
+  
+  <div class="col-2">
+    <button class="btn btn-danger my-2 my-sm-0" type="submit">Comentar</button>
+  </div>
+
+  <mat-card >
+      <app-comentario-list></app-comentario-list>
+  </mat-card>
+
+
+  
+  <!--<div class="card" id="comment">
       <div class="card-header">Usuario
       </div>
       <div class="form-group"><input type="text" placeholder="Escribe un comentario" class="form-control"></div>
@@ -18,5 +34,4 @@
         <h4 style="color:black;">{{comentario.nombre}}</h4>
         <div class="a" style="color:black;">{{comentario.comentario}}</div>
       </section>
-
-      </div>
+  </div>-->

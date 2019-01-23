@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { IdeaService } from './shared/idea/idea.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
-import { FilterPipeModule } from 'ngx-filter-pipe';
+//import { FilterPipeModule } from 'ngx-filter-pipe';
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { DesafioSaveComponent } from './desafio-save/desafio-save.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
 import { DesafioShowComponent } from './desafio-show/desafio-show.component';
 import { IdeaSaveInDesafioComponent } from './idea-save-in-desafio/idea-save-in-desafio.component';
+import { ComentarioListComponent } from './comentario-list/comentario-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { IdeaSaveInDesafioComponent } from './idea-save-in-desafio/idea-save-in-
     IdeaShowComponent,
     DesafioShowComponent,
     IdeaSaveInDesafioComponent,
+    ComentarioListComponent,
   ],
   imports: [
     FormsModule,
