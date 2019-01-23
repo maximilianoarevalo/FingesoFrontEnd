@@ -2,12 +2,17 @@
     <h2 style="color:#B40431;"><p>Ideas</p></h2>
     <h4 style="color:#B40431;"><p>En este lugar podrás publicar tu idea</p></h4>
     <button type="button" [routerLink]="['/idea-save']" class="btn btn-danger">Publicar Idea</button>
-  <mat-card-content>
+    <mat-card-content>
     <mat-list>
-      <div class="col-lg-6 offset-lg-0" style="width: 700px;">
+      <div class="col-lg-6 offset-lg-0" style="width: 500px;">
+        <div class="row">
+          <div class="col">
           <input type="text" [(ngModel)]="term" placeholder="Busca tu idea"/>
-          <button type="button" (click)="getIdeaByTitle(term)" class="btn btn-danger">Buscar</button>
-        <section class="demo" *ngFor="let idea of ideas">     
+          
+          <button type="button" style="margin-left:20px;" (click)="getIdeaByTitle(term)" class="btn btn-danger">Buscar</button>
+        </div>
+        </div>
+          <section class="demo" *ngFor="let idea of ideas">     
           <h4 style="color:white;">{{idea.nombre}}</h4> 
           <div class="a" style="color:white;">{{idea.descripcion}}</div>
           <h3 mat-line>
