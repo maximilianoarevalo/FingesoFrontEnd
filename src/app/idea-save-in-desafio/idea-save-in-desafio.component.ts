@@ -12,6 +12,9 @@ import { IdeaService } from '../shared/idea/idea.service';
 })
 export class IdeaSaveInDesafioComponent implements OnInit {
 
+  
+
+
   desafio: any =  {};
   idea: any =  {};
   sub: Subscription;
@@ -33,6 +36,8 @@ export class IdeaSaveInDesafioComponent implements OnInit {
     gotoList() {
       this.router.navigate(['/desafio-show',this.id]);
     }
+
+    
 
     save(form: NgForm,id:IDBDatabase){
       this.desafioService.saveIdeaInDesafio(form,id).subscribe(result => {

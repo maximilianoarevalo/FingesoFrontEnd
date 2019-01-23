@@ -30,12 +30,12 @@ export class DesafioService {
  }
 
  getAllIdeasInDesafio(id){
-
   return this.http.get('//localhost:8080/ideas'+'/'+id+'/')
  }
 
  saveIdeaInDesafio(idea: any,id : IDBDatabase): Observable<any> {
   let result: Observable<Object>;
+
   result = this.http.post('//localhost:8080/desafios/'+id+'/addIdea/', idea);
   return result;
   }

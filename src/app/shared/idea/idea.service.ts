@@ -34,4 +34,14 @@ export class IdeaService {
     return this.http.get('//localhost:8080/ideas'+'/'+id+'/comentarios/');
   }
 
+
+  saveComentarioInsideIdea(comentario: any,id): Observable<any> {
+    let result: Observable<Object>;
+    let comentarioJson = {
+        comentario:comentario 
+    }
+    result = this.http.post('//localhost:8080/ideas/'+id+'/addComentario/', comentarioJson);
+    return result;
+  }
+
 }

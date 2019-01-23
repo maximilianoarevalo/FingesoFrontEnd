@@ -39,7 +39,7 @@ export class IdeaSaveComponent implements OnInit {
     }
 
     gotoList() {
-      this.router.navigate(['/desafio-list']);
+      this.router.navigate(['/idea-list']);
     }
 
     save(form: NgForm){

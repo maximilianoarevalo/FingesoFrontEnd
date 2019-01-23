@@ -10,13 +10,16 @@
   <br>
   <br>
   <div class="card-body">
-    <form id="search" class="form my-2 my-lg-2">
-    <input class="form-control mr-sm-2" type="text" placeholder="Escribe un comentario" aria-label="Comentar">
+    <form  id="search" class="form my-2 my-lg-2">
+      <input class="form-control mr-sm-2"  type="text" placeholder="Escribe un comentario" 
+      matInput placeholder="Escribe tu comentario" [(ngModel)]="comentario.content"
+      required name="nombre" #nombre>
+   <!-- <input class="form-control mr-sm-2"  type="text" placeholder="Escribe un comentario" aria-label="Comentar">-->
     </form>
   </div>
   
   <div class="col-2">
-    <button class="btn btn-danger my-2 my-sm-0" type="submit">Comentar</button>
+    <button class="btn btn-danger my-2 my-sm-0" type="submit" [routerLink]="['/idea-show', id]" (click)="showComentarioOdds()">Comentar</button>
   </div>
 
   <mat-card >

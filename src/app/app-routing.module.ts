@@ -36,6 +36,8 @@ const routes: Routes = [
     {
         path: 'idea-save-in-desafio/:id', component: IdeaSaveInDesafioComponent
     }, 
+    
+
 ];
 
 @NgModule({
