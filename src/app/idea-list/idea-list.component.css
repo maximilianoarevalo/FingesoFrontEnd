@@ -76,9 +76,8 @@ p[_ngcontent-c2] {
   font-size: 2rem;
   margin-left: 19%;
 }
-@media (min-width: 992px)
-.col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin-top: -4%;
+
+.h3, h3 {
+  font-size: 1.75rem;
+  margin-left: 41%;
 }

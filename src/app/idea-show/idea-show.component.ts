@@ -50,11 +50,15 @@ export class IdeaShowComponent implements OnInit {
       }
     });
   }
+  
+  goToIdea(){
+    window.location.reload();
+  }
 
   showComentarioOdds(){
     console.log(this.comentario.content)
     this.ideaService.saveComentarioInsideIdea(this.comentario.content,this.id).subscribe(result => {
-      this.goToList();
+      this.goToIdea();
     }, error => console.error(error));
 
     this.ideaService.getAllComentariosInIdea(this.id).subscribe(data => {

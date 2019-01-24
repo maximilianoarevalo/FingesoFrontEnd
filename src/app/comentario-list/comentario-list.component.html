@@ -1,8 +1,10 @@
-<mat-card-title>Comentarios</mat-card-title>
+<mat-card id="x">
+<mat-card-title id="titulo">Comentarios</mat-card-title>
   <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let comentario of comentarios">
-        <h3 mat-line>{{comentario.comentario}}</h3>
-      </mat-list-item>
-    </mat-list>
+      <section class="container" *ngFor="let comentario of comentarios">     
+          <h4 style="color:#B40431;">Autor</h4> 
+          <h6 style="color:#B40431;">{{comentario.comentario}}</h6>
+          <br>
+      </section>
   </mat-card-content>
+</mat-card>

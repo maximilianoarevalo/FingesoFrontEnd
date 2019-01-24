@@ -1,17 +1,19 @@
 
 <div class="card" id="card">
     <div class="card-header">
-      {{idea.nombre}}
+      Título: {{idea.nombre}}
     </div>
     <div class="card-body">
       <p class="card-text">{{idea.descripcion}}</p>
     </div>
   </div>
   <br>
-  <br>
+  <mat-card >
+      <app-comentario-list></app-comentario-list>
+  </mat-card>
   <div class="card-body">
     <form  id="search" class="form my-2 my-lg-2">
-      <input class="form-control mr-sm-2"  type="text" placeholder="Escribe un comentario" 
+      <input class="form-control mr-sm-2"  type="text" maxlength="240" placeholder="Escribe un comentario" 
       matInput placeholder="Escribe tu comentario" [(ngModel)]="comentario.content"
       required name="nombre" #nombre>
    <!-- <input class="form-control mr-sm-2"  type="text" placeholder="Escribe un comentario" aria-label="Comentar">-->
@@ -22,9 +24,7 @@
     <button class="btn btn-danger my-2 my-sm-0" type="submit" [routerLink]="['/idea-show', id]" (click)="showComentarioOdds()">Comentar</button>
   </div>
 
-  <mat-card >
-      <app-comentario-list></app-comentario-list>
-  </mat-card>
+ 
 
 
   

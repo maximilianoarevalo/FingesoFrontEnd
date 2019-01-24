@@ -13,7 +13,7 @@
         </div>
         </div>
           <section class="demo" *ngFor="let idea of ideas">     
-          <h4 style="color:white;">{{idea.nombre}}</h4> 
+          <h4 style="color:white;">Título: {{idea.nombre}}</h4> 
           <div class="a" style="color:white;">{{idea.descripcion}}</div>
           <h3 mat-line>
             <a mat-button [routerLink]="['/idea-show', idea._id]" class="btn btn-light"
